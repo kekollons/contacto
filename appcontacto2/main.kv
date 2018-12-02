@@ -1,0 +1,52 @@
+<WPrincipal>
+	id: Principal
+	orientation: 'vertical'
+	canvas:
+		Color:
+			rgb: .94,.94,.94
+		Rectangle:
+			pos: self.pos
+			size: self.size
+	
+	WLogo:
+	WImagenEstado:
+	WBotones:
+	
+<WLogo>
+	id: Logo
+	size_hint: 1,.2
+	canvas:
+		Rectangle:
+			pos: self.pos
+			size: self.size
+			source: 'logo.png'
+			
+<WImagenEstado>
+	id: ImEstado
+	size_hint: 1,.6
+	
+<WBotones>
+	id: Botones
+	size_hint: 1,.2
+
+	Button:
+		id: Btnon
+		text: 'ON'
+		font_size: 34
+        font_name: 'Roboto'
+		height: 10
+        background_color: (0.4, 0.8, 0.4, 0.9)
+        bold: True
+        italic: True
+		on_press: Botones.activar()
+		
+	Button:
+		id: Btnoff
+		text: 'OFF'
+		font_size: 34
+        font_name: 'Roboto'
+		height: 10
+        background_color: (0.8, 0.4, 0.4, 0.9)
+        bold: True
+        italic: True
+		on_release: Botones.desactivar()
