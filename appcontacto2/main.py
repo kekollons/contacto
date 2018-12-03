@@ -10,7 +10,7 @@ from kivy.uix.boxlayout import BoxLayout
 import mqtt.client as mqttClient
 import time
 
-Config.set('input', 'mouse', 'mouse.multitouch_on_demand')
+#Config.set('input', 'mouse', 'mouse.multitouch_on_demand')
 
 # Funciones MQTT
 
@@ -39,11 +39,12 @@ def on_connect(client, userdata, flags, rc):
 		global conectado
 		conectado = True
 		 
-	else:	 
+	else:
+		pass
 #		print("Conexión fallida")
 
 def comp_conex():
-	global im_source, contador
+	global im_source, contador, texto
 	contador += 1
 	if contador > 20:
 		im_source = 'espera.png'
