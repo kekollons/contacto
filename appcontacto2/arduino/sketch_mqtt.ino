@@ -40,13 +40,14 @@ void mqttconnect() {
     if (client.connect("Rele1" , mqttUser, mqttPassword)) {
       client.subscribe(ORD_TOPIC);
     } else {
-      delay(4000);
+      delay(3000);
     }
   }
 }
 
 void pubestado() {
   estado = digitalRead(sensor);
+  delay(5);
   if(estado == LOW){
     client.publish(EST_TOPIC, "OFF");
   } else {
