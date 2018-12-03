@@ -1,12 +1,12 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
  
-const char* ssid = "Lowi3370";
-const char* password =  "F22JH4BDWJD3GH";
-const char* mqttServer = "m23.cloudmqtt.com";
-const int mqttPort =  17997;
-const char* mqttUser = "udwgocyz";
-const char* mqttPassword = "lC73EBlF8DAd";
+const char* ssid = "";
+const char* password =  "";
+const char* mqttServer = "";
+const int mqttPort =  00000;
+const char* mqttUser = "";
+const char* mqttPassword = "";
 
 const int rele = 32;
 const int sensor = 34;
